@@ -6,7 +6,11 @@ const addBtn = document.querySelector('.add');
 const inTitle = document.querySelector('#in-title');
 const inAuthor = document.querySelector('#in-author');
 const bookContainer = document.querySelector('.books'); 
-let myLib = [];
+let myLib = [
+    {title: "benkis",author:"kkkksjhd"},
+    {title: "benkis",author:"kkkksjhd"},
+    {title: "benkis",author:"kkkksjhd"},
+    {title: "benkis",author:"kkkksjhd"}];
 
 function Book(title, author) {
     this.title = title;
@@ -24,3 +28,4 @@ Book.prototype.saveBook = () => {
   };
  
   navigate();
+  displayBook(myLib);

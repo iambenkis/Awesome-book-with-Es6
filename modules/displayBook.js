@@ -1,10 +1,10 @@
 import { deleteFunc } from "./delete.js";
 
 const bookContainer = document.querySelector('.books');
-export const displayBook = () => {
+export const displayBook = (library) => {
     ///getMyLib();
     bookContainer.innerHTML = '';
-    myLib.forEach((s) => {
+    library.forEach((s) => {
       bookContainer.innerHTML += ` 
                 <div class="book-item">
                     <p class="title"> "${s.title}" by ${s.author}</p> 
