@@ -10,4 +10,17 @@ const links = document.querySelectorAll('.link');
 const slides = document.querySelectorAll('.slide');
 let myLib = [];
 
- 
+function Book(title, author) {
+    this.title = title;
+    this.author = author;
+}
+
+Book.prototype.saveBook = () => {
+    const savedBook = {
+      title: this.title,
+      author: this.author,
+    };
+  
+    myLib.unshift(savedBook);
+    displayBook();
+  };
