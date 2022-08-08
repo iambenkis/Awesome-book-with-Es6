@@ -1,3 +1,5 @@
+import { deleteFunc } from "./delete.js";
+
 const bookContainer = document.querySelector('.books');
 export const displayBook = () => {
     ///getMyLib();
