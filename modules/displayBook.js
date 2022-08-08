@@ -1,5 +1,6 @@
+const bookContainer = document.querySelector('.books');
 export const displayBook = () => {
-    getMyLib();
+    ///getMyLib();
     bookContainer.innerHTML = '';
     myLib.forEach((s) => {
       bookContainer.innerHTML += ` 
@@ -12,6 +13,6 @@ export const displayBook = () => {
     
     const deleteButton = bookContainer.querySelectorAll('.remove');
     deleteButton.forEach((key, index) => key.addEventListener('click', () => {
-      this.deleteFunc(index);
+      deleteFunc(index);
     }));
   }
