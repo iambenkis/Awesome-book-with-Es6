@@ -15,6 +15,6 @@ export const displayBook = (library) => {
     
     const deleteButton = bookContainer.querySelectorAll('.remove');
     deleteButton.forEach((key, index) => key.addEventListener('click', () => {
-      deleteFunc(index);
+      deleteFunc(library,index);
     }));
   }
