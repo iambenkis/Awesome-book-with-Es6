@@ -1,7 +1,7 @@
 const links = document.querySelectorAll('.link');
 const slides = document.querySelectorAll('.slide');
 
-export default function navigate() {
+const navigate = () => {
   links.forEach((link, id) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -12,3 +12,5 @@ export default function navigate() {
     });
   });
 }
+
+export default navigate;
