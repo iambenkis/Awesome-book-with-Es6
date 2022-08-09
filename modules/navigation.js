@@ -11,6 +11,6 @@ const navigate = () => {
       slides[id].classList.remove('disable');
     });
   });
-}
+};
 
 export default navigate;
