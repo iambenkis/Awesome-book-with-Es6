@@ -1,6 +1,7 @@
 import { displayBook } from './modules/displayBook.js'; 
 import { setMyLib } from './modules/localStorage.js';
 import { navigate } from './modules/navigation.js';
+import { displayDateTime } from './modules/addDate.js';
 
 const addBtn = document.querySelector('.add');
 const inTitle = document.querySelector('#in-title');
@@ -34,15 +35,16 @@ const addBook = (e) => {
       insertBook.saveBook();
       inAuthor.value = '';
       inTitle.value = '';
-      //myLib.push(insertBook);
+      ///myLib.push(insertBook);
       //window.location.reload();
       console.log('I add ', myLib);
       displayBook(myLib);
       setMyLib(myLib); 
     }
 }
-
+displayDateTime();
 navigate();
 // document.addEventListener('DOMContentLoaded', displayBook(myLib));
 displayBook(myLib);
 addBtn.addEventListener('click', addBook);
+
