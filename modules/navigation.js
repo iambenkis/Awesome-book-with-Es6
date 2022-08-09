@@ -9,7 +9,7 @@ export const navigate = () => {
           });
           slides[id].classList.remove('disable');
           if (id === 0) {
-              window.location.reload();
+              //window.location.reload();
           } 
         });
     });

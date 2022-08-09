@@ -1,14 +1,12 @@
-export const setMyLib = (myLib) => { 
-    const str = JSON.stringify(myLib); 
-    localStorage.setItem('myLib', str);
+import myLib from "../index.js";
+
+export const setMyLib = () => {
+    const str = JSON.stringify(myLib);
+    localStorage.setItem('myLib', str); 
 };
 
-export const getMyLib = (myLib) => {
-    const str = localStorage.getItem('myLib'); 
-   myLib = JSON.parse(str);
-    if (!myLib) {
-       myLib = [];
-    }
-    console.log(str, "--",myLib);
-    return myLib;
+export const getMyLib = () => {
+    const str = localStorage.getItem('myLib');   
+    str? myLib.copyWithin( JSON.parse(str)) :alert('nothing ther');
+    console.log('error ', myLib , 'value' , str); 
   };

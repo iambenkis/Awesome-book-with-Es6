@@ -193,5 +193,7 @@
     top: 12%;
     right: 10%;
     font-weight: 500;
-  }
-  
+}
+.mm {
+  display: none;
+}  

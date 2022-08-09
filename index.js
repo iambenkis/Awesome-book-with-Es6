@@ -7,7 +7,9 @@ const addBtn = document.querySelector('.add');
 const inTitle = document.querySelector('#in-title');
 const inAuthor = document.querySelector('#in-author');
 const bookContainer = document.querySelector('.books'); 
-let myLib = [];  
+let  myLib = [];  
+export default myLib;
+
 class Book {
     constructor(title = '', author = '') {
         this.title = title;
@@ -20,7 +22,7 @@ class Book {
         };
 
         myLib.unshift(savedBook);
-        displayBook(myLib);
+        displayBook();
     }
 }
 
@@ -34,17 +36,13 @@ const addBook = (e) => {
       const insertBook = new Book(bookTitle, bookAuthor);
       insertBook.saveBook();
       inAuthor.value = '';
-      inTitle.value = '';
-      ///myLib.push(insertBook);
-      //window.location.reload();
-      console.log('I add ', myLib);
-      displayBook(myLib);
-      setMyLib(myLib); 
+      inTitle.value = ''; 
+      setMyLib(); 
     }
 }
 displayDateTime();
 navigate();
-// document.addEventListener('DOMContentLoaded', displayBook(myLib));
-displayBook(myLib);
+document.addEventListener('DOMContentLoaded', displayBook);
+// displayBook();
 addBtn.addEventListener('click', addBook);
 

@@ -1,11 +1,11 @@
 import { deleteFunc } from "./delete.js";
 import { getMyLib } from "./localStorage.js";
+import myLib from "../index.js";
 const bookContainer = document.querySelector('.books');
-export const displayBook = (myLib) => {
-    
-    console.log("i get this:",  getMyLib(myLib))
+export const displayBook = () => {
+    getMyLib(); 
     bookContainer.innerHTML = '';
-    getMyLib(myLib).forEach((s) => {
+    myLib.forEach((s) => {
       bookContainer.innerHTML += ` 
                 <div class="book-item">
                     <p class="title"> "${s.title}" by ${s.author}</p> 
@@ -16,6 +16,6 @@ export const displayBook = (myLib) => {
     
     const deleteButton = bookContainer.querySelectorAll('.remove');
     deleteButton.forEach((key, index) => key.addEventListener('click', () => {
-      deleteFunc(myLib,index);
+      deleteFunc(index);
     }));
   }
