@@ -15,4 +15,4 @@ export const displayBook = () => {
     deleteButton.forEach((key, index) => key.addEventListener('click', () => {
       deleteFunc(index);
     }));
-  }
+}

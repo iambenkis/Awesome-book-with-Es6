@@ -1,4 +1,4 @@
- import { displayBook } from "./displayBook.js";
+ import {displayBook} from "./displayBook.js";
  import { setMyLib } from "./localStorage.js";
  import myLib from "../index.js";
  export const deleteFunc = (index) => {

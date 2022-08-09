@@ -26,7 +26,6 @@ class Book {
     }
 }
 
-
 const addBook = (e) => {
     e.preventDefault();
     const bookTitle = inTitle.value;
@@ -39,11 +38,9 @@ const addBook = (e) => {
       inTitle.value = ''; 
       setMyLib(); 
     }
-}
-//getStorage()
+} 
 displayDateTime();
 navigate();
-document.addEventListener('DOMContentLoaded', displayBook);
-// displayBook();
+document.addEventListener('DOMContentLoaded', displayBook); 
 addBtn.addEventListener('click', addBook);
 
