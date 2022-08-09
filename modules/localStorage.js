@@ -1,7 +1,6 @@
-import myLib from '../index.js';// eslint-disable-line
-
-export const setMyLib = () => {
-  const str = JSON.stringify(myLib);
+// import myLib from '../index.js';
+export const setMyLib = (lib) => {
+  const str = JSON.stringify(lib);
   localStorage.setItem('myLib', str);
 };
 

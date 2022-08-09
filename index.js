@@ -1,7 +1,7 @@
-import displayBook from './modules/displayBook.js';// eslint-disable-line
-import { setMyLib, getMyLib } from './modules/localStorage.js';// eslint-disable-line
-import navigate from './modules/navigation.js';// eslint-disable-line
-import displayDateTime from './modules/addDate.js';// eslint-disable-line
+import { displayBook } from './modules/displayBook.js';
+import { setMyLib, getMyLib } from './modules/localStorage.js';
+import navigate from './modules/navigation.js';
+import displayDateTime from './modules/addDate.js';
 
 const addBtn = document.querySelector('.add');
 const inTitle = document.querySelector('#in-title');
@@ -23,7 +23,7 @@ class Book {
     };
 
     myLib.unshift(savedBook);
-    displayBook();
+    displayBook(myLib);
   }
 }
 
@@ -37,10 +37,10 @@ const addBook = (e) => {
     insertBook.saveBook();
     inAuthor.value = '';
     inTitle.value = '';
-    setMyLib();
+    setMyLib(myLib);
   }
 };
 displayDateTime();
 navigate();
-document.addEventListener('DOMContentLoaded', displayBook);
+document.addEventListener('DOMContentLoaded', displayBook(myLib));
 addBtn.addEventListener('click', addBook);

@@ -1,8 +1,8 @@
-import deleteFunc from './delete.js';// eslint-disable-line
-import myLib from '../index.js';// eslint-disable-line
+import { setMyLib } from './localStorage.js';
 
 const bookContainer = document.querySelector('.books');
-export default function displayBook() {
+
+export const displayBook = (myLib) => {
   bookContainer.innerHTML = '';
   myLib.forEach((s) => {
     bookContainer.innerHTML += ` 
@@ -12,8 +12,15 @@ export default function displayBook() {
                 </div>
         `;
   });
+
   const deleteButton = bookContainer.querySelectorAll('.remove');
   deleteButton.forEach((key, index) => key.addEventListener('click', () => {
-    deleteFunc(index);
+    deleteFunc(myLib, index);
   }));
-}
+};
+
+export const deleteFunc = (myLib, index) => {
+  myLib.splice(index, 1);
+  setMyLib(myLib);
+  displayBook(myLib);
+};
