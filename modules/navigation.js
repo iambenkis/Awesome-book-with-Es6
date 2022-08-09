@@ -7,10 +7,7 @@ export const navigate = () => {
           slides.forEach((slide) => {
             slide.classList.add('disable');
           });
-          slides[id].classList.remove('disable');
-          if (id === 0) {
-              //window.location.reload();
-          } 
+          slides[id].classList.remove('disable'); 
         });
     });
 }

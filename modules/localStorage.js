@@ -6,7 +6,6 @@ export const setMyLib = () => {
 };
 
 export const getMyLib = () => {
-    const str = localStorage.getItem('myLib');   
-    str? myLib.copyWithin( JSON.parse(str)) :alert('nothing ther');
-    console.log('error ', myLib , 'value' , str); 
+    let books = JSON.parse(localStorage.getItem("myLib"));
+    return books;
   };

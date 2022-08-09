@@ -1,5 +1,5 @@
 import { displayBook } from './modules/displayBook.js'; 
-import { setMyLib } from './modules/localStorage.js';
+import { setMyLib, getMyLib} from './modules/localStorage.js';
 import { navigate } from './modules/navigation.js';
 import { displayDateTime } from './modules/addDate.js';
 
@@ -7,7 +7,7 @@ const addBtn = document.querySelector('.add');
 const inTitle = document.querySelector('#in-title');
 const inAuthor = document.querySelector('#in-author');
 const bookContainer = document.querySelector('.books'); 
-let  myLib = [];  
+let myLib = [...getMyLib()];
 export default myLib;
 
 class Book {
@@ -40,6 +40,7 @@ const addBook = (e) => {
       setMyLib(); 
     }
 }
+//getStorage()
 displayDateTime();
 navigate();
 document.addEventListener('DOMContentLoaded', displayBook);
