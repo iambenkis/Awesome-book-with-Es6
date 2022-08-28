@@ -2,7 +2,7 @@
 
 # Awesome books
  
-In this project, We build the Awesome books application by using JavaScript classes.
+In this project, We build the Awesome books application by using JavaScript classes
 
 ## Built With
 
@@ -23,7 +23,7 @@ To get a local copy up and running follow these simple example steps.
 * Open the command prompt in this directory.
 * Clone by using this command : ```git clone https://github.com/iambenkis/Awesome-book-with-Es6.git```
 * Got to the cloned folder in your prompt command using ```cd Awesome-books-with-Es6```
-* Run the code
+* Run the code.
 
 ### Prerequisites
 
